@@ -1,0 +1,22 @@
+{
+  "name": "ecommerce-nodejs",
+  "version": "1.0.0",
+  "description": "eCommerce website built in Node JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tacho090/eCommerce-NodeJS.git"
+  },
+  "keywords": [
+    "ecommerce"
+  ],
+  "author": "Pablo Mora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tacho090/eCommerce-NodeJS/issues"
+  },
+  "homepage": "https://github.com/tacho090/eCommerce-NodeJS#readme"
+}

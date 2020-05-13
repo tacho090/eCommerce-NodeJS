@@ -54,3 +54,52 @@
   label: 'accessLog',
   timestamp: '2020-05-13T18:15:34.443Z'
 }
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:19:07.331Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:19:47.078Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:37:39.058Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:38:04.660Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T19:37:04.859Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T19:37:43.091Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T19:39:17.017Z'
+}

@@ -1,12 +1,9 @@
-const winston = require('winston');
-const path = require('path');
-const logPath = __dirname;
-const tsFormat = () => (new Date().toISOString());
 const express = require('express');
 const app = express();
 
 const logger = require('./startup/logging');
 require('./startup/routes')(app);
+require('./startup/prod')(app);
 
 app.set('view engine', 'pug');
 app.set('views', './views');

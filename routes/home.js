@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('index', { title: 'eCommerce-NodeJS', message: 'Hello Node'})
+    res.render('index', { title: 'eCommerce-NodeJS', message: 'Hello world'})
 });
 
 module.exports = router;

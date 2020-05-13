@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/tacho090/eCommerce-NodeJS/issues"
   },
-  "homepage": "https://github.com/tacho090/eCommerce-NodeJS#readme"
+  "homepage": "https://github.com/tacho090/eCommerce-NodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "winston": "^3.2.1"
+  }
 }

@@ -12,6 +12,9 @@ app.set('view engine', 'pug');
 app.set('views', './views');
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => logger['accessLog'].info(`Listening on port ${port}...`));
+const server = app.listen(port, () => {
+    logger['accessLog'].info(`Listening on port ${port}...`);
+    console.log(`Server started on port: ${port}...`);
+});
 
 module.exports = server;

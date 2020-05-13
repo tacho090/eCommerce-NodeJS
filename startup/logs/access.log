@@ -26,3 +26,31 @@
   service: 'winston log info-level',
   label: 'accessLog'
 }
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:05:02.120Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:06:13.213Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:06:19.847Z'
+}
+{
+  message: 'Listening on port 3000...',
+  level: 'info',
+  service: 'winston log info-level',
+  label: 'accessLog',
+  timestamp: '2020-05-13T18:15:34.443Z'
+}

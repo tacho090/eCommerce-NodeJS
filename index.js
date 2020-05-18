@@ -2,10 +2,10 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const app = express();
-
 const logger = require('./startup/logging');
 require('./startup/routes')(app);
 require('./startup/prod')(app);
+app.use(express.static('public'));
 
 app.engine('.hbs',exphbs({
     defaultLayout: 'main', 

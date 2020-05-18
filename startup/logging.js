@@ -14,8 +14,8 @@ const errorLog = createLogger({
     format: combine(
         label({ label: 'errorLog' }),
         timestamp(),
-        prettyPrint(),
-        // myFormat
+        // prettyPrint(),
+        myFormat
     ),
     transports: [
         new winston.transports.File({
@@ -32,8 +32,8 @@ const accessLog = createLogger({
     format: combine(
         label({ label: 'accessLog' }),
         timestamp(),
-        prettyPrint(),
-        // myFormat,
+        // prettyPrint(),
+        myFormat,
     ),
     defaultMeta: { service: 'winston log info-level' },
     transports: [

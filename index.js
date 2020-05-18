@@ -7,11 +7,12 @@ const logger = require('./startup/logging');
 require('./startup/routes')(app);
 require('./startup/prod')(app);
 
-app.engine('handlebars',exphbs({
+app.engine('.hbs',exphbs({
     defaultLayout: 'main', 
-    layoutsDir: path.join(__dirname, 'views/mainLayout')
+    layoutsDir: path.join(__dirname, 'views/mainLayout'),
+    extname: '.hbs'
 }));
-app.set('view engine', 'handlebars');
+app.set('view engine', '.hbs');
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {

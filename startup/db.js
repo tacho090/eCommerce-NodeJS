@@ -1,10 +1,17 @@
 const winston = require('winston');
 const mongoose = require('mongoose');
-const config = require('config');
+// const config = require('config');
+const logger = require('./logging');
 
 module.exports = function () {
-    const db = config.get('db');
-    mongoose.connect( db,
-    { useNewUrlParser: true, useUnifiedTopology: true })
-        .then(() => winston.info(`Connected to ${db}...`));
+    const db = 'mongodb://localhost/products';
+    const connectionConfirm = `Connected to ${db}`;
+    // const db = config.get('db');
+    mongoose.connect(db,
+        { useNewUrlParser: true, useUnifiedTopology: true })
+        .then(() => {
+            logger['connectionLog'].info(connectionConfirm);
+            console.log(connectionConfirm);
+        })
+        .catch(err => console.log('Could not connect to MongoDB:', err));
 }

@@ -46,8 +46,28 @@ const accessLog = createLogger({
     ]
 });
 
+const connectionLog = createLogger({
+    level: 'info',
+    format: combine(
+        label({ label: 'accessLog' }),
+        timestamp(),
+        // prettyPrint(),
+        myFormat,
+    ),
+    defaultMeta: { service: 'winston log info-level' },
+    transports: [
+        new transports.File({
+            filename: path.join(logPath, '/logs/access.log'),
+            'timestamp': true,
+            timestamp: tsFormat,
+            level: 'info'
+        })
+    ]
+});
+
 
 module.exports = {
     errorLog: errorLog,
-    accessLog: accessLog
+    accessLog: accessLog,
+    connectionLog: connectionLog
 };

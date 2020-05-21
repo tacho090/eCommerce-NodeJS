@@ -1,5 +1,8 @@
+{{# each products }}
+
+
 <div class="card" style="width: 18rem;">
-    <img src="https://www.srichinmoycentre.org/files/Members/toshala/puppy-small.jpg"
+    <img src={{this.imagePath}}
         class="card-img-top test-image image-responsive" alt="dog">
     <div class="card-body">
         <h5 class="card-title">Card title</h5>
@@ -20,3 +23,5 @@
         <a href="#" class="btn btn-success pull-right" role="button">Button</a>
     </div>
 </div>
+
+{{/each}}

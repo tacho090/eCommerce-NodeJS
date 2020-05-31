@@ -3,6 +3,10 @@ const { Product } = require('../models/product');
 const express = require('express');
 const router = express.Router();
 
+router.get('/', async(req, res) => {
+    res.send(await Product.find());
+});
+
 router.post('/', auth, async (req, res) => {
     let product = new Product({
         imagePath: req.body.imagePath,

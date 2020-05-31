@@ -1,4 +1,3 @@
-const config = require('config');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
@@ -7,12 +6,9 @@ const logger = require('./startup/logging');
 require('./startup/db')();
 require('./startup/routes')(app);
 require('./startup/prod')(app);
+require('./startup/config')();
 app.use(express.static('public'));
 
-if (!config.get('jwtPrivateKey')) { 
-    console.error('FATAL ERROR: jwtPrivateKey is not defined');
-    process.exit(1); 
-};
 
 app.engine('.hbs',exphbs({
     defaultLayout: 'main', 

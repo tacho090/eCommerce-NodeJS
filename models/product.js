@@ -18,6 +18,10 @@ const Product = mongoose.model('Product', new mongoose.Schema({
     price: {
         type: Number,
         required: true
+    },
+    publishedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
     }
 }));
 

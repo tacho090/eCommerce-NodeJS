@@ -9,6 +9,7 @@ router.post('/', auth, async (req, res) => {
         name: req.body.name,
         description: req.body.description,
         price: req.body.price,
+        publishedBy: req.body.publishedBy
     });
     product = await product.save();
     res.send(product);

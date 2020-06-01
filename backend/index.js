@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const app = express();
@@ -8,6 +9,7 @@ require('./startup/routes')(app);
 require('./startup/prod')(app);
 require('./startup/config')();
 app.use(express.static('public'));
+app.use(cors());
 
 
 app.engine('.hbs',exphbs({

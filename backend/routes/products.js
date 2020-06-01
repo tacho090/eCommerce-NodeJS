@@ -2,8 +2,9 @@ const auth = require('../middleware/auth');
 const { Product } = require('../models/product');
 const express = require('express');
 const router = express.Router();
+const cors = require('cors');
 
-router.get('/', async(req, res) => {
+router.get('/', cors(), async(req, res) => {
     res.send(await Product.find());
 });
 

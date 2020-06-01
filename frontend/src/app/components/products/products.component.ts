@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class ProductsComponent implements OnInit {
 
   products: any = [];
-  
+
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -21,13 +21,14 @@ export class ProductsComponent implements OnInit {
       for (const d of (data as any)) {
         this.products.push({
           imagePath: d.imagePath,
+          imageAlt: 'temporaryAlt',
+          tag: 'NEW',
           name: d.name,
           description: d.description,
           price: d.price,
           publishedBy: d.publishedBy
         });
       }
-      console.log(this.products);
     });
   }
 

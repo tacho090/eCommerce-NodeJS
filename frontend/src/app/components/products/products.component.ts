@@ -38,4 +38,8 @@ export class ProductsComponent implements OnInit {
     console.log(this.products[index]);
   }
 
+  newMessage() {
+    this.data.changeMessage('Hello from Products');
+  }
+
 }

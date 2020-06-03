@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-products',
@@ -9,11 +10,12 @@ import { ApiService } from 'src/app/services/api.service';
 export class ProductsComponent implements OnInit {
 
   products: any = [];
-
-  constructor(private api: ApiService) { }
+  message: string;
+  constructor(private api: ApiService, private data: DataService) { }
 
   ngOnInit(): void {
     this.getProducts();
+    this.data.currentMessage.subscribe(message => this.message = message);
   }
 
   getProducts() {
@@ -30,6 +32,10 @@ export class ProductsComponent implements OnInit {
         });
       }
     });
+  }
+
+  addToCart(index) {
+    console.log(this.products[index]);
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,10 +9,16 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ShoppingCartComponent implements OnInit {
 
   @Input() products: any[];
+  message: string;
 
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit(): void {
+    this.data.currentMessage.subscribe(message => this.message = message);
+  }
+
+  newMessage() {
+    this.data.changeMessage('Hello from Sibling');
   }
 
 }

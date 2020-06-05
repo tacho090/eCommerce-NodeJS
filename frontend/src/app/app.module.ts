@@ -1,5 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import { MatIconModule} from '@angular/material/icon';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -32,8 +37,15 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
       { path: 'checkout', component: CheckoutComponent},
       { path: '**', component: NotFoundComponent }
     ]),
+    FormsModule,
+    MatInputModule,
+    MatTableModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [
+    { provide: MAT_DIALOG_DATA, useValue: {} },
+     { provide: MatDialogRef, useValue: {} }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

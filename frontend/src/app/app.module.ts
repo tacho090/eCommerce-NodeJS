@@ -10,6 +10,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomeComponent } from './home/home.component';
     NavBarComponent,
     ShoppingCartComponent,
     HomeComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { HomeComponent } from './home/home.component';
       { path: '', component: HomeComponent},
       { path: 'products', component: ProductsComponent },
       { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'checkout', component: CheckoutComponent},
       { path: '**', component: NotFoundComponent }
     ]),
   ],

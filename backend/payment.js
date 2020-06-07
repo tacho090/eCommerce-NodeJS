@@ -1,4 +1,4 @@
-const stripe = require('stripe')('pk_test_51Gq6xdIPCOadEjnwAHYGcx4WzIsTVbdhGxS732lQ1ftaTMpDTO89CDDMr4kxUVeRCwqWINhQGKD7e62kIxkEg4x100zQkd84Sp');
+const stripe = require('stripe')(process.env.stripe_sk);
 
 const paymentIntent = await stripe.paymentIntents.create({
     amount: 1099,

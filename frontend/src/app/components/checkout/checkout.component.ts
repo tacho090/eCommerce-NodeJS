@@ -80,7 +80,21 @@ export class CheckoutComponent implements OnDestroy, AfterViewInit {
   }
 
   onSuccess(token): void {
-    this.dialogRef.close({token});
+    fetch('http://localhost:3000/checkout/order', {
+      method: 'POST',
+      headers: {
+        'Content-Type':'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        stripeTokenId: token.id,
+        items: "items"
+      })
+    }).then(() => {
+      alert('purchase succesful');
+    }).catch((error) => {
+      console.error(error);
+    });
   }
 
   onError(error): void {

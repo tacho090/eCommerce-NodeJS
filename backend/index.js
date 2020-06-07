@@ -8,6 +8,7 @@ require('./startup/db')();
 require('./startup/routes')(app);
 require('./startup/prod')(app);
 require('./startup/config')();
+require('dotenv').config();
 app.use(express.static('public'));
 app.use(cors());
 

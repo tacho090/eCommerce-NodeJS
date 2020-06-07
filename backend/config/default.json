@@ -1,3 +1,8 @@
 {
-    "jwtPrivateKey": ""
+    "name": "eCommerce - default",
+    "mail": {
+        "host": "default-mail-server"
+    },
+    "jwtPrivateKey": "",
+    "stripe_sek_key": ""
 }

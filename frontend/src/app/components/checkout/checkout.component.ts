@@ -31,18 +31,18 @@ export class CheckoutComponent implements OnDestroy, AfterViewInit {
     this._totalAmount = data['totalAmount'];
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     if (this.card) {
       this.card.removeEventListener('change', this.cardHandler);
       this.card.destroy();
     }
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.initiateCardElement();
   }
 
-  initiateCardElement() {
+  initiateCardElement(): void {
     const cardStyle = {
       base: {
         color: '#32325d',
@@ -63,14 +63,15 @@ export class CheckoutComponent implements OnDestroy, AfterViewInit {
     this.card.addEventListener('change', this.cardHandler);
   }
 
-  onChange({error}) {
+  onChange({error}): void {
     if (error) { this.cardError = error.message; }
     else { this.cardError = null; }
     this.cd.detectChanges();
   }
 
-  async createStripeToken() {
+  async createStripeToken(): Promise<any> {
     const {token, error} = await stripe.createToken(this.card);
+    // stripe token obtained in this method
     if (token) {
       this.onSuccess(token);
     } else {
@@ -78,11 +79,11 @@ export class CheckoutComponent implements OnDestroy, AfterViewInit {
     }
   }
 
-  onSuccess(token) {
+  onSuccess(token): void {
     this.dialogRef.close({token});
   }
 
-  onError(error) {
+  onError(error): void {
     if (error.message) {
       this.cardError = error.message;
     }

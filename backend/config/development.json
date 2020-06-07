@@ -1,0 +1,8 @@
+{
+    "name": "eCommerce - development",
+    "mail": {
+        "host": "dev-mail-server"
+    },
+    "jwtPrivateKey": "jwtPrivateKey",
+    "stripe_sek_key": "stripe_sek_key"
+}

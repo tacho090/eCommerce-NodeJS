@@ -8,7 +8,7 @@ module.exports = function () {
     const db = 'mongodb://localhost/products';
     const connectionConfirm = `Connected to ${db}`;
     // const db = config.get('db');
-    mongoose.connect(db,
+    mongoose.connect(process.env.MONGODB_URI || db,
         { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => {
             logger['connectionLog'].info(connectionConfirm);
